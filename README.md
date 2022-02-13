@@ -17,8 +17,8 @@ Run `ionic serve` for a dev server. Navigate to `http://localhost:8100/`. The ap
 
 ## _After_
 
-> Run Android`ionic capacitor build android` 
-> Run Ios`ionic capacitor build ios`
+* > Run Android`ionic capacitor build android` 
+* > Run Ios`ionic capacitor build ios`
 
 
 ## ---------------------------------------------------------------------------- ##
@@ -29,7 +29,7 @@ Run `ionic serve` for a dev server. Navigate to `http://localhost:8100/`. The ap
 npm install capacitor-resources -g
 
 ## Packcage.json:
-
+~~~
 {
   ...
   "scripts": {
@@ -37,26 +37,26 @@ npm install capacitor-resources -g
       "resources": "capacitor-resources -p android,ios"
   }
 }
-
+~~~
 ## Comando inicial:
 
 $ capacitor-resources
 
 ## Alternativas
 
--V, --version               output the version number
--i, --icon [optional]       optional icon file path
+* -V, --version               output the version number
+* -i, --icon [optional]       optional icon file path
                             (default: ./resources/icon.png)
--s, --splash [optional]     optional splash file path
+* -s, --splash [optional]     optional splash file path
                             (default: ./resources/splash.png)
--p, --platforms [optional]  optional platform token comma separated list
+* -p, --platforms [optional]  optional platform token comma separated list
                             available tokens: android, ios, windows, blackberry10
                             (default: all platforms processed)
--o, --outputdir [optional]  optional output directory
+* -o, --outputdir [optional]  optional output directory
                             (default: ./resources/)
--I, --makeicon [optional]   option to process icon files only
--S, --makesplash [optional] option to process splash files only
--h, --help                  output usage information
+* -I, --makeicon [optional]   option to process icon files only
+* -S, --makesplash [optional] option to process splash files only
+* -h, --help                  output usage information
 
 ## Cada vez que se quiera ejecutar:
 
