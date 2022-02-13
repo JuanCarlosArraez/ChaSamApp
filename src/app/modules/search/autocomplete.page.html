@@ -1,0 +1,27 @@
+<ion-content class="ion-text-center">
+
+  <ion-searchbar
+    #searchbar
+    showCancelButton
+    placeholder="Busca Canciones, artistas y letras"
+    (ionChange)="searchChanged($event.target)"
+    (ionCancel)="close()">
+  </ion-searchbar>
+
+
+        <ion-icon name="play-circle-outline" class="logo"  color="light" ></ion-icon>
+        <ion-text  color="ulightgrey" class="ion-margin-bottom " >
+        <h5 style="margin-top: 200px;">Busca Canciones, artistas y letras que te interesen</h5>
+        </ion-text>
+
+
+  <ion-label text-wrap *ngIf="results">
+  <ion-item button *ngFor="let item of (results | async)">
+ 
+{{item?.term}}
+  </ion-item>
+  </ion-label>
+
+
+
+</ion-content>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private statusBar: StatusBar)
+  {this.statusBar.overlaysWebView(true); this.statusBar.backgroundColorByHexString('#0091d4ad');
+}
+
 }

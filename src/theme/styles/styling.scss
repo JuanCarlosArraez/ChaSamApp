@@ -1,0 +1,33 @@
+.buttons-intro-header{
+   height: 90px !important;
+   padding-left: 7%;
+}
+
+.icon-person, .icon-trends{
+  transform: scale(1.5);
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  padding-bottom: 20px;
+}
+
+
+.button-trends{
+   margin-right:4% !important;
+}
+
+//Bullets-pagination
+
+.swiper-pagination {
+    top: 8% !important;
+    z-index: 0 !important;
+ }
+ .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    background: var(--ion-color-light);
+    transform: scale(1.5);
+    margin: 0 12px;
+ }
+ .swiper-pagination-bullet-active{
+    background: var(--ion-color-light);
+   
+ }

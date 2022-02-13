@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild } from '@angular/core';
+import { Router} from '@angular/router';
+import {IonSlides} from '@ionic/angular';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router,) {}
+  @ViewChild(IonSlides) slides: IonSlides;
 
+  slideOpts = {
+    initialSlide: 1,
+  };
+
+ public onNextSlide(e) {
+      this.slides?.slideTo(e)
+  }
+
+  public openListening(url:string){
+    this.router.navigateByUrl('/'+url);
+  }
 }

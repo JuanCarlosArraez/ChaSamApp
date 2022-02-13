@@ -75,7 +75,10 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
+
+  /** APP **/
   --ion-color-personalize: #03a9ff;
+  --ion-color-gradient: linear-gradient(to top, #066afe, #03a9ff);
 }
 
 @media (prefers-color-scheme: dark) {

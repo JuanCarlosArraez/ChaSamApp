@@ -1,0 +1,21 @@
+<div id="container" style="  z-index: 2 !important;">
+
+    <ion-text color="light">
+     <h1 class="letter"><strong>{{message}}</strong></h1>
+    </ion-text>
+
+      <br>
+      <ion-img (click)="openListening('listening')"
+       class="pulse image" [src]="logo" alt="">
+      </ion-img>
+      <br>
+
+      <div class="circle" (click)="openSearchModal()">
+       <ion-icon color="light"
+        class="search-icon" 
+        [ngStyle]="{'z-index': '1'}"
+        name="search-outline">
+       </ion-icon>
+      </div>
+
+</div>

@@ -1,0 +1,29 @@
+
+  #container {
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 50%;
+    ion-img{
+      display: inline-flex !important;
+      width: 20vh;
+      height: 30vh;
+      }
+  }
+  
+  #container strong {
+    top: -20%;
+    font-weight: bold 550;
+    font-size: 26px;
+    line-height: 26px;
+    color: var(--ion-color-light);
+  }
+  
+  .search-icon{
+    margin:0px auto;
+    transform: scale(2);
+  }
+  
+
+  
+  
