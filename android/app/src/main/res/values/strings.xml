@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ChaSam</string>
+    <string name="title_activity_main">ChaSam</string>
+    <string name="package_name">io.chasam.app</string>
+    <string name="custom_url_scheme">io.chasam.app</string>
+</resources>

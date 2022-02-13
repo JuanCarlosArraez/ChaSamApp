@@ -1,0 +1,6 @@
+{
+	"appId": "io.chasam.app",
+	"appName": "ChaSam",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
