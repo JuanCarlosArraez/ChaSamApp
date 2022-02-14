@@ -1,27 +1,62 @@
-<ion-content class="ion-text-center">
-
+<ion-content class="ion-text-center" *ngIf="isLoading; else loading">
+  <br />
   <ion-searchbar
     #searchbar
     showCancelButton
-    placeholder="Busca Canciones, artistas y letras"
+    placeholder="{{placeholder}}"
     (ionChange)="searchChanged($event.target)"
-    (ionCancel)="close()">
+    (ionCancel)="close()"
+    [debounce]="500"
+  >
   </ion-searchbar>
 
+  <ion-text class="ion-text-left">
+    <h5 class="letterSong">&nbsp;&nbsp; {{title}}</h5>
+  </ion-text>
 
-        <ion-icon name="play-circle-outline" class="logo"  color="light" ></ion-icon>
-        <ion-text  color="ulightgrey" class="ion-margin-bottom " >
-        <h5 style="margin-top: 200px;">Busca Canciones, artistas y letras que te interesen</h5>
-        </ion-text>
+  <br />
+  <ion-list *ngIf="itemArray?.length >=1">
+    <ion-item
+      lines="none"
+      class="minilist"
+      *ngFor="let item of (results | async)"
+    >
+      <ion-avatar slot="start">
+        <ion-icon
+          name="musical-notes"
+          class="scale2"
+          [ngStyle]="{'margin-top': '10px'}"
+        ></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item?.term}}</h2>
+      </ion-label>
+      <ion-thumbnail class="ion-text-center" slot="end">
+        <br />
+        <div>
+          <ion-icon name="play-circle"></ion-icon>
+        </div>
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
 
+  <div *ngIf="isLoading && isLoadingSearch; else nothing"></div>
 
-  <ion-label text-wrap *ngIf="results">
-  <ion-item button *ngFor="let item of (results | async)">
- 
-{{item?.term}}
-  </ion-item>
+  <ion-label *ngIf="isNoResults" text-wrap>
+    <ion-icon name="play-circle-outline" class="logo" color="light"></ion-icon>
+    <ion-text color="ulightgrey" class="ion-margin-bottom">
+      <h5 style="margin-top: 120px">
+        {{noResult}}
+      </h5>
+    </ion-text>
   </ion-label>
 
-
-
 </ion-content>
+<ng-template #loading>
+  <loading [loading]="!itemArray?.length"></loading>
+</ng-template>
+<ng-template #nothing>
+  <loading [loading]="isLoading|| !isLoadingSearch"></loading>
+</ng-template>
+
+
