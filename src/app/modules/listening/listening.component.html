@@ -1,5 +1,10 @@
 <ion-content>
-  <ion-icon color="light" name="close-outline" [ngStyle]="{'transform': 'scale(2)'}"></ion-icon>
+  <ion-buttons translucent>
+    <ion-button routerLink="{{routeHome}}"  class="close-button">
+      <ion-icon color="light" name="close-outline" class="scale2"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+ 
  
   <div class="logo">
     <div class="c-shape"></div>
@@ -12,6 +17,6 @@
 
   
   <music-loading></music-loading>
-  <footer [route]="'../home'"></footer>
+  <footer [route]="routeHome"></footer>
 
 </ion-content>

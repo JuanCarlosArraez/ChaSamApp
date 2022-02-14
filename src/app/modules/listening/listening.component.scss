@@ -150,3 +150,18 @@ $circle-color: #5bc1ff;
   border-radius: 50%;
   animation: outer-circle-2 1.5s linear infinite;
 }
+
+ion-button{
+  --background: transparent;
+  --background-activated: transparent;
+  --background-activated-opacity: transparent;
+  --background-hover: transparent;
+  --color: transparent;
+  --color-hover: transparent;
+  --color-focused:transparent;
+  --color-activated:transparent;
+}
+.close-button{
+  margin-top: 30px;
+  margin-left: 15px;
+}

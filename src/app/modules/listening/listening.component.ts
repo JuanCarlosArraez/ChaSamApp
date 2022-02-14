@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeningComponent implements OnInit {
 
+  public routeHome: string ='../home';
+
   constructor() { }
 
   ngOnInit():void {}
