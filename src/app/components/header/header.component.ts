@@ -27,7 +27,7 @@ export class HeaderComponent {
   @Output() public libraryRoute= new EventEmitter<number>();
 
   public library: string = 'Biblioteca';
-  public bookshop: string= 'Librería';
+  public bookshop: string= 'Listas';
 
   public onNext(event) {
     this.libraryRoute.emit(event);
