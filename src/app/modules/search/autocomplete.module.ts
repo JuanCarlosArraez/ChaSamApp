@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AutocompletePageRoutingModule } from './autocomplete-routing.module';
 
 import { AutocompletePage } from './autocomplete.page';
-
+import { SpinnerLoadingModule } from '../../utils/spinner-loading/spinner-loading.module';
 
 @NgModule({
   imports: [
@@ -15,6 +15,7 @@ import { AutocompletePage } from './autocomplete.page';
     FormsModule,
     IonicModule,
     RouterModule,
+    SpinnerLoadingModule,
     AutocompletePageRoutingModule
   ],
   declarations: [AutocompletePage]
